@@ -4,7 +4,7 @@ echo ""
 echo "Installing Samba for file sharing..."
 echo " "
 #sudo apt-get install samba samba-common-bin
-
+ 
 # Config : 
 # sudo nano /etc/samba/smb.conf
 # Turn on : Wins Support = yes
