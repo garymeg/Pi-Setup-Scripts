@@ -15,19 +15,19 @@ echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
 wait
-sudo smbpasswd -a ${USER}
-#password
-#password
+sudo smbpasswd -a pi
+password
+password
 
 echo "samba password set to 'password'"
 echo "please change the password to something secure"
-echo "use 'sudo smbpasswd -a "${USER}"' to change it later"
+echo "use 'sudo smbpasswd -a "pi"' to change it later"
 
 #Make Share :
 echo ""
 echo "Creating shared directory at /home/pi/Documents/Share"
 echo ""
-sudo mkdir -p -m 0777 /home/${USER}/Documents/Share
+sudo mkdir -p -m 0777 /home/pi/Documents/Share
 
 #Config : sudo nano /etc/samba/smb.conf
 #Scroll To Bottom
@@ -39,7 +39,7 @@ echo ""
 sudo tee -a /etc/samba/smb.conf > /dev/null <<EOT
 [Share]
    comment= Shared Network Directory
-   path=/home/${USER}/Documents/Share
+   path=/home/pi/Documents/Share
    browseable=yes
    writeable=yes
    only guest=no
