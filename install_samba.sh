@@ -3,7 +3,8 @@ clear
 echo ""
 echo "Installing Samba for file sharing..."
 echo " "
-#sudo apt-get install samba samba-common-bin
+sudo apt-get update
+sudo apt-get install samba samba-common-bin
  
 # Config : 
 # sudo nano /etc/samba/smb.conf
