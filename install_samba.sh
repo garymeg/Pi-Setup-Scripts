@@ -1,3 +1,5 @@
+
+
 sudo apt-get install samba samba-common-bin
 
 # Config : 
@@ -5,9 +7,10 @@ sudo apt-get install samba samba-common-bin
 # Turn on : Wins Support = yes
 # workgroup = WORKGROUP
 
-Sudo smbpasswd -a pi
+sudo smbpasswd -a pi
 
 #Make Share :
+mkdir -p Documents/piShare
 cd ${home}/Documents
 sudo mkdir -m 0777 piShare
 
