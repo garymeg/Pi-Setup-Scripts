@@ -21,9 +21,7 @@ wait
 echo ""
 echo "Creating shared directory at /home/pi/Documents/piShare"
 echo ""
-mkdir -p Documents/
-cd /home/pi/Documents
-sudo mkdir -m 0777 piShare
+sudo mkdir -p -m 0777 /home/pi/Documents/piShare
 
 #Config : sudo nano /etc/samba/smb.conf
 #Scroll To Bottom
