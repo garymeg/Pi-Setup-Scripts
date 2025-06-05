@@ -1,21 +1,35 @@
 
-
+clear
+echo ""
+echo "Installing Samba for file sharing..."
+echo ""
 sudo apt-get install samba samba-common-bin
 
 # Config : 
 # sudo nano /etc/samba/smb.conf
 # Turn on : Wins Support = yes
 # workgroup = WORKGROUP
-
+clear
+echo ""
+echo "Setting up Samba user password"
+echo "recomend to use pi user password for simplicity"
+echo ""
 sudo smbpasswd -a pi
 
 #Make Share :
+echo ""
+echo "Creating shared directory at /home/pi/Documents/piShare"
+echo ""
 mkdir -p Documents/piShare
 cd ${home}/Documents
 sudo mkdir -m 0777 piShare
 
 #Config : sudo nano /etc/samba/smb.conf
 #Scroll To Bottom
+echo ""
+echo "Adding Samba share configuration to /etc/samba/smb.conf"
+echo ""
+# Append the share configuration to the smb.conf file
 
 sudo tee -a /etc/samba/smb.conf > /dev/null <<EOT
 [piShare]
