@@ -15,6 +15,7 @@ echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
 sudo smbpasswd -a pi
+wait
 
 #Make Share :
 echo ""
