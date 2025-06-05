@@ -14,6 +14,7 @@ echo ""
 echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
+wait
 sudo smbpasswd -a pi
 wait
 
