@@ -16,8 +16,8 @@ echo "recomend to use pi user password for simplicity"
 echo ""
 wait
 sudo smbpasswd -a ${USER}
-password
-password
+#password
+#password
 
 echo "samba password set to 'password'"
 echo "please change the password to something secure"
