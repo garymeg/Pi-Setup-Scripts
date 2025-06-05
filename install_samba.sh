@@ -2,8 +2,8 @@
 clear
 echo ""
 echo "Installing Samba for file sharing..."
-echo ""
-sudo apt-get install samba samba-common-bin
+echo " "
+#sudo apt-get install samba samba-common-bin
 
 # Config : 
 # sudo nano /etc/samba/smb.conf
@@ -15,9 +15,8 @@ echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
 wait
-sudo smbpasswd -a pi
-wait
-
+#sudo smbpasswd -a pi
+ 
 #Make Share :
 echo ""
 echo "Creating shared directory at /home/pi/Documents/piShare"
