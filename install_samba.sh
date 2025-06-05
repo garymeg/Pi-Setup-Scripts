@@ -15,8 +15,11 @@ echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
 wait
-#sudo smbpasswd -a pi
- 
+sudo smbpasswd -a pi
+raspberry
+raspberry
+
+
 #Make Share :
 echo ""
 echo "Creating shared directory at /home/pi/Documents/piShare"
