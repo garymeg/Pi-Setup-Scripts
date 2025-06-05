@@ -35,18 +35,8 @@ sudo lighttpd-enable-mod fastcgi-php
 sudo systemctl restart lighttpd
 
 
-
-
-
-
-
-
-
-
-
-
-
-sudo nano /var/www/pialert/config/pialert.conf
+#sudo nano /var/www/pialert/config/pialert.conf
+sudo tee -a /var/www/pialert/config/pialert.conf > /dev/null <<EOT
 # General Settings
 # ----------------------
 PIALERT_PATH               = '/home/pi/pialert'
@@ -240,7 +230,7 @@ SATELLITE_PROXY_URL = ''
 # ----------------------
 DAYS_TO_KEEP_ONLINEHISTORY = 120
 DAYS_TO_KEEP_EVENTS = 360
-
+EOT
 
 
 

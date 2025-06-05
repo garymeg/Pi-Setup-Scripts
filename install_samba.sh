@@ -15,13 +15,11 @@ echo "Setting up Samba user password"
 echo "recomend to use pi user password for simplicity"
 echo ""
 wait
-sudo smbpasswd -a pi
-password
-password
+sudo smbpasswd -a -n pi
 
-echo "samba password set to 'password'"
+echo "samba password set to no password"
 echo "please change the password to something secure"
-echo "use 'sudo smbpasswd -a "pi"' to change it later"
+echo "use 'sudo smbpasswd -U "pi"' to change it later"
 
 #Make Share :
 echo ""
@@ -47,6 +45,16 @@ sudo tee -a /etc/samba/smb.conf > /dev/null <<EOT
    directory mask=0777
    public=no 
    #(or yes if no login required)
+
+[RaspberryPi]
+   comment= Shared Network Directory
+   path=/
+   browseable=yes
+   writeable=yes
+   only guest=no
+   create mask=0777
+   directory mask=0777
+   public=no 
 EOT
 # Restart Samba Service
 sudo systemctl restart smbd
